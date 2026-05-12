@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  body { @apply font-sans antialiased bg-gray-50 text-gray-900; }
+}
+
+@layer components {
+  /* Buttons */
+  .btn { @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer; }
+  .btn-primary { @apply btn bg-[#0f2544] text-white hover:bg-[#1a4f9d] active:scale-95; }
+  .btn-accent  { @apply btn bg-orange-500 text-white hover:bg-orange-600 active:scale-95; }
+  .btn-success { @apply btn bg-emerald-600 text-white hover:bg-emerald-700 active:scale-95; }
+  .btn-danger  { @apply btn bg-red-500 text-white hover:bg-red-600 active:scale-95; }
+  .btn-outline { @apply btn bg-white text-[#0f2544] border-2 border-gray-200 hover:border-[#0f2544] active:scale-95; }
+  .btn-ghost   { @apply btn bg-transparent text-gray-600 hover:bg-gray-100 active:scale-95; }
+  .btn-sm      { @apply px-3 py-1.5 text-xs rounded-lg; }
+  .btn-lg      { @apply px-6 py-3.5 text-base rounded-2xl; }
+  .btn-block   { @apply w-full; }
+
+  /* Form */
+  .input   { @apply w-full px-4 py-2.5 border-2 border-gray-200 rounded-xl text-sm text-gray-900 bg-white outline-none transition-all focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10; }
+  .label   { @apply block text-xs font-bold text-gray-500 uppercase tracking-wide mb-1.5; }
+  .select  { @apply input appearance-none bg-no-repeat; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2394a3b8' d='M6 8L1 3h10z'/%3E%3C/svg%3E"); background-position: right 14px center; }
+
+  /* Card */
+  .card      { @apply bg-white rounded-2xl border border-gray-100 shadow-sm; }
+  .card-hover{ @apply card hover:shadow-lg hover:-translate-y-1 transition-all duration-200; }
+  .card-pad  { @apply card p-6; }
+
+  /* Badge */
+  .badge        { @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold; }
+  .badge-green  { @apply badge bg-emerald-100 text-emerald-800; }
+  .badge-blue   { @apply badge bg-blue-100 text-blue-800; }
+  .badge-orange { @apply badge bg-orange-100 text-orange-800; }
+  .badge-red    { @apply badge bg-red-100 text-red-800; }
+  .badge-gray   { @apply badge bg-gray-100 text-gray-700; }
+  .badge-amber  { @apply badge bg-amber-100 text-amber-800; }
+
+  /* Table */
+  .table-wrap  { @apply card overflow-hidden; }
+  .table-head  { @apply bg-[#0f2544] px-5 py-3; }
+  .table-cell  { @apply text-[10px] font-bold text-blue-200 uppercase tracking-widest; }
+  .table-row   { @apply px-5 py-3.5 border-b border-gray-50 text-sm transition-colors hover:bg-gray-50 last:border-0; }
+
+  /* Dashboard sidebar */
+  .ds-btn      { @apply flex items-center gap-3 w-full px-3 py-2.5 rounded-xl text-sm font-medium text-blue-200/70 hover:bg-white/10 hover:text-white transition-all; }
+  .ds-btn.active { @apply bg-white/15 text-white font-bold; }
+  .ds-icon     { @apply text-base w-5 text-center flex-shrink-0; }
+
+  /* Misc */
+  .page-title  { @apply text-2xl font-bold text-gray-900 mb-6; }
+  .section-title { @apply text-lg font-bold text-gray-800 mb-4; }
+  .qty-ctrl    { @apply flex items-center border-2 border-gray-200 rounded-xl overflow-hidden; }
+  .qty-btn     { @apply px-3.5 py-2 hover:bg-gray-100 font-bold text-gray-700 text-lg transition-colors; }
+  .qty-val     { @apply px-4 py-2 font-bold text-base min-w-[2.5rem] text-center; }
+}
