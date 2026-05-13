@@ -1,7 +1,7 @@
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl  = import."https://bmmbqxafepnixnnajonm.supabase.co"
-const supabaseKey  = import."sb_publishable_RTNMqL0_zKAb_xyV7l5f4Q__cyLO8yr"
+//const supabaseUrl  = import."https://bmmbqxafepnixnnajonm.supabase.co"
+//const supabaseKey  = import."sb_publishable_RTNMqL0_zKAb_xyV7l5f4Q__cyLO8yr"
 
 if (!supabaseUrl || !supabaseKey) {
   console.warn(
@@ -11,8 +11,8 @@ if (!supabaseUrl || !supabaseKey) {
 }
 
 export const supabase = createClient(
-  supabaseUrl  || '"https://bmmbqxafepnixnnajonm.supabase.co',
-  supabaseKey  || 'sb_publishable_RTNMqL0_zKAb_xyV7l5f4Q__cyLO8yr',
+  '"https://bmmbqxafepnixnnajonm.supabase.co',
+   'sb_publishable_RTNMqL0_zKAb_xyV7l5f4Q__cyLO8yr',
   {
     auth: {
       persistSession: true,
