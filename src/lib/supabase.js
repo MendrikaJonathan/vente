@@ -11,7 +11,7 @@ import { createClient } from '@supabase/supabase-js'
 }*/
 
 export const supabase = createClient(
-  '"https://bmmbqxafepnixnnajonm.supabase.co',
+  'https://bmmbqxafepnixnnajonm.supabase.co',
    'sb_publishable_RTNMqL0_zKAb_xyV7l5f4Q__cyLO8yr',
   {
     auth: {
